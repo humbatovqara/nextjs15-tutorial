@@ -8,7 +8,7 @@ export async function POST(request: Request) {
   const comment = await request.json();
   const newComment = {
     id: comments.length + 1,
-    text: comments.text,
+    text: comment.text,
   };
   comments.push(newComment);
   return new Response(JSON.stringify(newComment), {
